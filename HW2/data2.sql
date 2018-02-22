@@ -1,15 +1,15 @@
 
 /* C L E A N E D / U P / Q U E R I E S */
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('001', 'I',                   '13505314', 'Employee 1');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('002', 'M',                   '12345683', 'Employee 2');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('003', 'M',                   '87615423', 'Employee 3');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('004', 'M',                   '89876521', 'Employee 4');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('005', 'M',                   '87456921', 'Employee 5');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('006', 'HR',                  '89856865', 'Employee 6');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('007', 'HR',                  '87456568', 'Employee 7');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('008', 'HR',                  '89623636', 'Employee 8');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('009', 'S',                   '45456239', 'Employee 9');
-INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('010', 'A',                   '98562365', 'Employee 10');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('001', 'Information',                 '13505314', 'Employee 1');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('002', 'Marketing',                   '12345683', 'Employee 2');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('003', 'Marketing',                   '87615423', 'Employee 3');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('004', 'Marketing',                   '89876521', 'Employee 4');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('005', 'Marketing',                   '87456921', 'Employee 5');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('006', 'Human',                       '89856865', 'Employee 6');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('007', 'Human',                       '87456568', 'Employee 7');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('008', 'Human',                       '89623636', 'Employee 8');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('009', 'Sales',                       '45456239', 'Employee 9');
+INSERT INTO Dept (Code, Name, Phone, Contact) VALUES ('010', 'Account',                     '98562365', 'Employee 10');
 
 INSERT INTO Employee (ID,Name,Dept,Join_date) VALUES ('1000', 'EMP1',     '001',TO_DATE('17/12/2015', 'DD/MM/YYYY'));
 INSERT INTO Employee (ID,Name,Dept,Join_date) VALUES ('2000', 'EMP2',     '002',TO_DATE('14/02/2010', 'DD/MM/YYYY'));
