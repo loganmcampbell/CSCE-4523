@@ -3,6 +3,7 @@ DELETE FROM EXPENSE;
 DELETE FROM TRIP;
 DELETE FROM EMPLOYEE;
 DELETE FROM DEPT;
+CL SCR;
 
 
 /* C L E A N E D / U P / Q U E R I E S */
@@ -28,16 +29,16 @@ INSERT INTO Employee (ID,Name,Dept,Join_date) VALUES ('8000', 'EMP8',     '008',
 INSERT INTO Employee (ID,Name,Dept,Join_date) VALUES ('9000', 'EMP9',     '009',TO_DATE('05/05/2005', 'DD/MM/YYYY'));
 INSERT INTO Employee (ID,Name,Dept,Join_date) VALUES ('1001', 'EMP10',    '010',TO_DATE('02/02/2002', 'DD/MM/YYYY'));
 
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('1', '1000','DALLAS',                 TO_DATE('12/01/2016', 'DD/MM/YYYY'), TO_DATE('18/01/2016', 'DD/MM/YYYY'),'2000.00'); /*TU*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('2', '2000','CHICAGO',                TO_DATE('15/06/2018', 'DD/MM/YYYY'), TO_DATE('20/05/2018', 'DD/MM/YYYY'),'1500.00'); /*F*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('3', '3000','NEW ORLEANS',            TO_DATE('13/02/2013', 'DD/MM/YYYY'), TO_DATE('20/02/2013', 'DD/MM/YYYY'),'1200.00'); /*W*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('4', '4000','DENVER',                 TO_DATE('22/01/2010', 'DD/MM/YYYY'), TO_DATE('30/01/2010', 'DD/MM/YYYY'),'200.00');  /*F*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('5', '5000','KANSAS CITY',            TO_DATE('30/07/2019', 'DD/MM/YYYY'), TO_DATE('31/07/2019', 'DD/MM/YYYY'),'30.00');   /*TU*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('6', '6000','TOPEKA',                 TO_DATE('23/08/2038', 'DD/MM/YYYY'), TO_DATE('23/08/2038', 'DD/MM/YYYY'),'1.00');    /*M*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('7', '7000','SCRANTON',               TO_DATE('11/09/2048', 'DD/MM/YYYY'), TO_DATE('11/09/2048', 'DD/MM/YYYY'),'263.00');  /*F*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('8', '8000','SEATTLE',                TO_DATE('05/10/2058', 'DD/MM/YYYY'), TO_DATE('15/10/2058', 'DD/MM/YYYY'),'4000.00'); /*S*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('9', '9000','KNOXVILLE',              TO_DATE('05/11/2038', 'DD/MM/YYYY'), TO_DATE('10/11/2038', 'DD/MM/YYYY'),'3563.58'); /*F*/
-INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('10','1001','NEW YORK CITY',          TO_DATE('01/12/2028', 'DD/MM/YYYY'), TO_DATE('12/12/2028', 'DD/MM/YYYY'),'3434.20'); /*F*/
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('1', '1000','DALLAS',                 TO_DATE('12/01/2016', 'DD/MM/YYYY'), TO_DATE('18/01/2016', 'DD/MM/YYYY'),'2000.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('2', '2000','CHICAGO',                TO_DATE('04/04/2018', 'DD/MM/YYYY'), TO_DATE('06/04/2018', 'DD/MM/YYYY'),'1500.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('3', '1000','NEW ORLEANS',            TO_DATE('13/02/2013', 'DD/MM/YYYY'), TO_DATE('20/02/2013', 'DD/MM/YYYY'),'1200.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('4', '4000','DENVER',                 TO_DATE('22/01/2010', 'DD/MM/YYYY'), TO_DATE('30/01/2010', 'DD/MM/YYYY'),'200.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('5', '5000','KANSAS CITY',            TO_DATE('30/07/2019', 'DD/MM/YYYY'), TO_DATE('31/07/2019', 'DD/MM/YYYY'),'30.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('6', '6000','TOPEKA',                 TO_DATE('23/08/2038', 'DD/MM/YYYY'), TO_DATE('23/08/2038', 'DD/MM/YYYY'),'1.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('7', '7000','SCRANTON',               TO_DATE('11/09/2048', 'DD/MM/YYYY'), TO_DATE('11/09/2048', 'DD/MM/YYYY'),'263.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('8', '8000','SEATTLE',                TO_DATE('05/10/2058', 'DD/MM/YYYY'), TO_DATE('15/10/2058', 'DD/MM/YYYY'),'4000.00');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('9', '9000','KNOXVILLE',              TO_DATE('05/11/2038', 'DD/MM/YYYY'), TO_DATE('10/11/2038', 'DD/MM/YYYY'),'3563.58');
+INSERT INTO Trip (ID, Emp_ID, To_City, Dep_Date, Return_Date,Est_Cost) VALUES ('10','1001','NEW YORK CITY',          TO_DATE('01/12/2028', 'DD/MM/YYYY'), TO_DATE('12/12/2028', 'DD/MM/YYYY'),'3434.20');
 
 INSERT INTO Expense (Trip_ID, Receipt_No, Amount,Type,Submitted) VALUES ('1','01','500.00',   'T', TO_DATE('18/01/2016', 'DD/MM/YYYY'));
 INSERT INTO Expense (Trip_ID, Receipt_No, Amount,Type,Submitted) VALUES ('1','02','1200.00',  'H', TO_DATE('19/01/2014', 'DD/MM/YYYY'));
@@ -50,4 +51,4 @@ INSERT INTO Expense (Trip_ID, Receipt_No, Amount,Type,Submitted) VALUES ('5','03
 INSERT INTO Expense (Trip_ID, Receipt_No, Amount,Type,Submitted) VALUES ('6','01','350.00',   'T', TO_DATE('27/03/2012', 'DD/MM/YYYY'));
 INSERT INTO Expense (Trip_ID, Receipt_No, Amount,Type,Submitted) VALUES ('6','02','500.00',   'H', TO_DATE('20/02/2017', 'DD/MM/YYYY'));
 
-/*cl scr*/
+CL SCR;
