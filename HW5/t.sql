@@ -1,0 +1,44 @@
+Set serveroutput ON;
+DECLARE
+ID_INCREMENT INTEGER;
+INSERT_EMP_ID INTEGER;
+EMP_F NUMBER;
+INSERT_TO_CITY CHAR(15);
+INSERT_DEP_DATE DATE;
+INSERT_RETURN_DATE DATE;
+INSERT_EST_COST DECIMAL(6,2);
+BEGIN
+INSERT_EMP_ID       :=  &INSERT_EMP_ID;
+INSERT_TO_CITY      :=  UPPER('&INSERT_TO_CITY');
+INSERT_DEP_DATE     :=  TO_DATE('&INSERT_DEP_DATE','DD/MM/YYYY');
+INSERT_RETURN_DATE  :=  TO_DATE('&INSERT_RETURN_DATE','DD/MM/YYYY');
+INSERT_EST_COST     :=  &INSERT_EST_COST;
+dbms_output.put_line('[INT 4]        EMPLOYEE ID  : '     || INSERT_EMP_ID);
+dbms_output.put_line('[CHAR 15]      TO CITY      : '     || INSERT_TO_CITY);
+dbms_output.put_line('[DD/MM/YYYY]   Dep DATE     : '     || INSERT_DEP_DATE);
+dbms_output.put_line('[DD/MM/YYYY]   RET DATE     : '     || INSERT_RETURN_DATE);
+dbms_output.put_line('[DEC 6,2]      EST COST     : '     || INSERT_EST_COST);
+SELECT COUNT(*) INTO EMP_F FROM TRIP WHERE EMP_ID = INSERT_EMP_ID;
+IF (EMP_F = 0) THEN
+  dbms_output.put_line('INVALID EMPLOYEE ID');
+  dbms_output.put_line('TERMINATING');
+Else
+  dbms_output.put_line('EMPLOYEE ID MATCHED');
+  IF (INSERT_RETURN_DATE < INSERT_DEP_DATE) THEN
+    dbms_output.put_line('DEPATURE DATE IS AFTER RETURN DATE');
+  Else
+    dbms_output.put_line('DATES ARE VALID');
+  END IF;
+  IF (INSERT_EST_COST < 1.00 OR INSERT_EST_COST > 4000.00) THEN
+    dbms_output.put_line('ESTIMATED COST IS NOT IN RANGE: 1.00 TO 4000.00');
+  Else
+    dbms_output.put_line('ESTIMATED COST IS VALID');
+  END IF;
+  SELECT MAX(ID) INTO ID_INCREMENT FROM TRIP;
+  ID_INCREMENT := ID_INCREMENT + 1;
+  INSERT INTO Trip (ID,Emp_ID,To_City,Dep_Date,Return_Date,Est_Cost)
+  VALUES (ID_INCREMENT,INSERT_EMP_ID,INSERT_TO_CITY,INSERT_DEP_DATE,INSERT_RETURN_DATE,INSERT_EST_COST);
+  dbms_output.put_line('[INSERTION COMPLETED]');
+END IF;
+END;
+/
